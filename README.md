@@ -36,6 +36,61 @@ standard Python `[]` operator- e.g. `data['_foo']`. This will
 similarly return `JSON.undefined` if the property does not exist.
 
 
+Usage
+-----
+
+To use the module, do `from opchjson import JSON`. If you wish,
+you can also import `undefined`, to save a bit of typing on
+`JSON.undefined`.
+
+### JSON()
+
+If you already have a data structure in memory that is suitable
+for JSON representation, e.g. a Python dict, you can pass it to
+`JSON()` to convert it into `opchjson` representation.
+
+### JSON.parse()
+
+`JSON.parse` takes a single positional argument, which can be
+a string, bytes, a bytearray, a pathlib Path, or any file-like
+object. If it is a Path, the file will be assumed to be UTF-8
+encoded unless you provide an `encoding` keyword argument
+specifying a different encoding. You can also pass any keyword
+argument that the Python standard library `json.load` function
+would accept.
+
+The returned value will be None, a bool, an int, a float, a
+string, or an instance of JSON.Array or JSON.Object.
+
+### JSON.stringify()
+
+This function is similar to the JavaScript one of the same name.
+The first argument is the value to encode as JSON. The remaining
+arguments are either positional arguments as per JavaScript, or
+keyword arguments as per Python's `json.dumps`, or a mixture of
+both.
+
+### JSON.Array
+
+Instances of this class are essentially identical to Python lists,
+except that they will return `JSON.undefined` rather than throwing
+exceptions when you try to retrieve list elements that don't exist.
+Note that empty Arrays count as falsey, like Python and unlike
+JavaScript.
+
+### JSON.Object
+
+Instances of this class are essentially identical to Python dicts,
+except that they will return `JSON.undefined` rather than throwing
+exceptions when you try to retrieve keys that don't exist. Note that
+empty Objects count as falsey, like Python and unlike JavaScript.
+
+### JSON.undefined
+
+This is a singleton instance that behaves like an empty, immutable
+`JSON.Object`. Test for it using `foo is JSON.undefined`.
+
+
 History
 -------
 
