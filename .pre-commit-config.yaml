@@ -22,6 +22,6 @@ repos:
   hooks:
     - id: ty
       name: ty check
-      entry: uvx ty check opchjson
+      entry: ty check opchjson
       language: python
-      files: opchjson/
+      pass_filenames: false
