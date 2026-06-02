@@ -54,6 +54,7 @@ ignore = [
   "FURB189",  # we have to subclass str etc
   "PLR2004",  # no, not all constants are 'magic'
   "PLR6301",  # no, you cannot magically tell when it should be a static method
+  "RUF067",  # in fact, our entire module is in __init__.py
   "SIM105",  # no, we're not going to use contextlib.suppress when pass will do
   "TRY003",  # no, exceptions with messages are not bad
 ]
