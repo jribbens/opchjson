@@ -17,7 +17,7 @@ version = (data.get('summary') or {}).get('version')
 you can write:
 ```python
 from pathlib import Path
-from jsjson import JSON
+from opchjson import JSON
 
 data = JSON.parse(Path('data.json'))
 version = data.summary.version

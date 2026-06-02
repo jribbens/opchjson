@@ -1,5 +1,5 @@
 [project]
-name = "jsjson"
+name = "opchjson"
 version = "0.1.0"
 description = "Handle JSON files easily, like in JavaScript"
 readme = "README.md"
@@ -11,7 +11,7 @@ requires = ["uv_build>=0.11.18,<0.12"]
 build-backend = "uv_build"
 
 [project.urls]
-Homepage = "https://github.com/jribbens/jsjson"
+Homepage = "https://github.com/jribbens/opchjson"
 
 [dependency-groups]
 dev = [
