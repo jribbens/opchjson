@@ -15,7 +15,7 @@ with Path('data.json').open(encoding='utf-8') as fh:
 version = (data.get('summary') or {}).get('version')
 ```
 you can write:
-```
+```python
 from pathlib import Path
 from jsjson import JSON
 
@@ -39,6 +39,6 @@ similarly return `JSON.undefined` if the property does not exist.
 History
 -------
 
-### 1.0.0 (2026-06-02)
+### 0.1.0 (2026-06-02)
 
   * Initial version.
