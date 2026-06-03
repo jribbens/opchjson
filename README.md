@@ -82,8 +82,12 @@ JavaScript.
 
 Instances of this class are essentially identical to Python dicts,
 except that they will return `JSON.undefined` rather than throwing
-exceptions when you try to retrieve keys that don't exist. Note that
-empty Objects count as falsey, like Python and unlike JavaScript.
+exceptions when you try to retrieve keys that don't exist, and
+attribute references will be looked up in the dictionary unless
+the attribute name starts with an underscore. So, for example,
+`obj.foo` is identical to `dict.get('foo', JSON.undefined)`.
+Note that empty Objects count as falsey, like Python and unlike
+JavaScript.
 
 ### JSON.undefined
 
