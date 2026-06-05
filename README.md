@@ -102,6 +102,10 @@ This is a singleton instance that behaves like an empty, immutable
 History
 -------
 
+### 0.2.0 (2026-06-05)
+
+  * Add Object._ SimpleNamespace attribute.
+
 ### 0.1.0 (2026-06-02)
 
   * Initial version.
