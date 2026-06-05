@@ -596,6 +596,7 @@ class JSON:
     class Array:  # noqa: PLW1641
         """A JSON array."""
 
+        _JSON: type['JSON']
         _list: list['JSON.Types']
 
         def __init__(
@@ -612,7 +613,7 @@ class JSON:
             """
             # ruff: disable[SLF001]
             self._JSON = base
-            self._list: list[JSON.Types] = (
+            self._list = (
                 init._list.copy()
                     if type(init) is type(self)
                     and init._JSON is self._JSON
@@ -950,6 +951,7 @@ class JSON:
     class Object:  # noqa: PLW1641
         """A JSON Object."""
 
+        _JSON: type['JSON']
         _dict: dict[int | str, 'JSON.Types']
 
         def __init__(
