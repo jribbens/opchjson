@@ -18,6 +18,7 @@ import json
 from pathlib import Path
 import re
 import sys
+from types import SimpleNamespace
 from typing import (
     Any,
     Never,
@@ -951,6 +952,7 @@ class JSON:
     class Object:  # noqa: PLW1641
         """A JSON Object."""
 
+        _: SimpleNamespace
         _JSON: type['JSON']
         _dict: dict[int | str, 'JSON.Types']
 
@@ -969,6 +971,7 @@ class JSON:
                 kwargs: initialisation keyword arguments as per dict()
             """
             self._JSON = base
+            self._ = SimpleNamespace()
             self._dict = {}
             self._update(*args, **kwargs)
 

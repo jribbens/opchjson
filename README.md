@@ -89,6 +89,10 @@ the attribute name starts with an underscore. So, for example,
 Note that empty Objects count as falsey, like Python and unlike
 JavaScript.
 
+Objects also have an `_` attribute, which is set to an empty
+`types.SimpleNamespace`. It can be used to store ancillary data
+that will not appear in the output JSON representation.
+
 ### JSON.undefined
 
 This is a singleton instance that behaves like an empty, immutable
