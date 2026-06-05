@@ -1,6 +1,6 @@
 [project]
 name = "opchjson"
-version = "0.1.0"
+version = "0.2.0"
 description = "Handle JSON files easily, like in JavaScript"
 readme = "README.md"
 requires-python = ">=3.11"
