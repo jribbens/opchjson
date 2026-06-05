@@ -1279,11 +1279,9 @@ class JSON:
             Delete name as an attribute or property.
 
             Args:
-                name: the attribute to look up. If it begins '__' then it
-                      is looked for as an attribute name. If it begins with
-                      a single '_' then it is looked for as an attribute
-                      with that name with the '_' removed. Otherwise it is
-                      used as an object property name
+                name: the attribute to look up. If it begins '_' then it is
+                      looked for as an attribute, otherwise it is used as an
+                      object property name.
             """
             if name[:1] == '_':
                 super().__delattr__(name)
