@@ -1283,10 +1283,13 @@ class JSON:
                       looked for as an attribute, otherwise it is used as an
                       object property name.
             """
-            if name[:1] == '_':
-                super().__delattr__(name)
-            else:
-                del self._dict[name]
+            try:
+                if name[:1] == '_':
+                    super().__delattr__(name)
+                else:
+                    del self._dict[name]
+            except (AttributeError, KeyError):
+                pass
 
         def __dir__(self) -> list[str]:
             """
