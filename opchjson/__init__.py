@@ -1246,11 +1246,9 @@ class JSON:
             Look up name as an object attribute or a dictionary key.
 
             Args:
-                name: the attribute to look up. If it begins '__' then it
-                      is looked for as an attribute name. If it begins with
-                      a single '_' then it is looked for as an attribute
-                      with that name with the '_' removed. Otherwise it is
-                      looked for as an object property name
+                name: the attribute to look up. If it begins '_' then it
+                      is looked for as an attribute name, otherwise it is
+                      looked for as an object property name.
 
             Returns:
                 the attribute or property value, or undefined if not found.
@@ -1264,11 +1262,9 @@ class JSON:
             Set name as an attribute or property value.
 
             Args:
-                name: the attribute to look up. If it begins '__' then it
-                      is looked for as an attribute name. If it begins with
-                      a single '_' then it is looked for as an attribute
-                      with that name with the '_' removed. Otherwise it is
-                      used as an object property name
+                name: the attribute to look up. If it begins '_' then it
+                      is looked for as an attribute name, otherwise it is
+                      used as an object property name.
                 value: the value to set
             """
             if name[:1] == '_':
